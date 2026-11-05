@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Títol de la pàgina</title>
+</head>
+<body>
+ <header>
+   <h1>Datos extra de fútbol</h1>
+    <nav>
+     <a href="indice.html">Índice</a>
+     <a href="historia.html">Historia</a>
+        <a href="datosextra.html">Datos extra</a>
+    </nav>
+</header>
+<h2>La liga española con más puntos</h2>
+<p><h3>FC Barcelona (Temporada 2012-13): Solo un año después, el equipo azulgrana dirigido por Tito Vilanova igualó exactamente la misma marca histórica.
+ <br>
+Estos son los primeros 5 partidos.<a href="https://es.fcstats.com/tabla,laliga-espana,19,1,470.php">Tabla</a>
+</h3>
+</p>
+<table border="1">
+  <thead>
+    <tr>
+      <th>Posición</th>
+      <th>Equipo</th>
+      <th>Partido 1</th>
+      <th>Partido 2</th>
+      <th>Partido 3</th>
+      <th>Partido 4</th>
+      <th>Partido 5</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>FC Barcelona</td>
+      <td>3</td><td>3</td><td>3</td><td>3</td><td>3</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Real Madrid</td>
+      <td>3</td><td>1</td><td>3</td><td>1</td><td>3</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Atlético de Madrid</td>
+      <td>1</td><td>0</td><td>0</td><td>1</td><td>3</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Real Sociedad</td>
+      <td>0</td><td>1</td><td>3</td><td>1</td><td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Valencia CF</td>
+      <td>3</td><td>3</td><td>0</td><td>3</td><td>0</td>
+      <td>9</td>
+    </tr>
+  </tbody>
+</table>
+
+<section>
+  <h2>Ficha del jugador</h2>
+  <form>
+    <p>
+      <label for="nombre">Nombre y apellidos:</label><br>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej. Alex García" required>
+    </p>
+    <p>
+      <label for="fecha-nacimiento">Fecha de nacimiento:</label><br>
+      <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+    </p>
+    <p>
+      <label for="nacionalidad">Nacionalidad:</label><br>
+      <input type="text" id="nacionalidad" name="nacionalidad" placeholder="Ej. España">
+    </p>
+    <p>
+      <label for="equipo">Equipo:</label><br>
+      <input type="text" id="equipo" name="equipo" placeholder="Nombre del equipo">
+    </p>
+    <p>
+      <label for="posicion">Posición:</label><br>
+      <select id="posicion" name="posicion">
+        <option value="">Selecciona una posición</option>
+        <option value="portero">Portero</option>
+        <option value="defensa">Defensa</option>
+        <option value="centrocampista">Centrocampista</option>
+        <option value="delantero">Delantero</option>
+      </select>
+    </p>
+    <p>
+      <label for="dorsal">Dorsal:</label><br>
+      <input type="number" id="dorsal" name="dorsal" min="1" max="99" placeholder="1–99">
+    </p>
+    <p>
+      <label for="altura">Altura (cm):</label><br>
+      <input type="number" id="altura" name="altura" min="100" max="250" placeholder="Ej. 180">
+    </p>
+    <p>
+      <label for="pierna">Pierna dominante:</label><br>
+      <select id="pierna" name="pierna">
+        <option value="">Selecciona</option>
+        <option value="derecha">Derecha</option>
+        <option value="izquierda">Izquierda</option>
+        <option value="ambas">Ambas</option>
+      </select>
+    </p>
+    <p>
+      <label for="observaciones">Observaciones:</label><br>
+      <textarea id="observaciones" name="observaciones" rows="4" cols="40" placeholder="Añade información adicional"></textarea>
+    </p>
+    <button type="submit">Guardar ficha</button>
+    <button type="reset">Limpiar</button>
+  </form>
+</section>
+
+    <script type="module" src="script.js"></script>
+
+<!-- NUEVOS ELEMENTOS DINÁMICOS -->
+
+<div id="mensaje-ficha" class="mensaje-ficha">
+    ⚽ ¡Ficha de jugador guardada correctamente!
+</div>
+
+<div class="estadistica-extra">
+    <div class="estadistica">
+        <span>🏆</span>
+        <strong>100</strong>
+        <p>PUNTOS HISTÓRICOS</p>
+    </div>
+
+    <div class="estadistica">
+        <span>⚽</span>
+        <strong>5</strong>
+        <p>PARTIDOS</p>
+    </div>
+
+    <div class="estadistica">
+        <span>🔥</span>
+        <strong>15</strong>
+        <p>PUNTOS DEL BARÇA</p>
+    </div>
+</div>
+
+  </body>
+</html>

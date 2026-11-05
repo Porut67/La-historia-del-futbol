@@ -1,0 +1,1074 @@
+
+/* =========================================
+   ⚽ LA HISTORIA DEL FÚTBOL
+   Diseño deportivo profesional
+   ========================================= */
+
+/* IMPORTAR TIPOGRAFÍAS */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* VARIABLES */
+:root {
+    --azul: #071b35;
+    --azul-claro: #123c67;
+    --rojo: #e63946;
+    --blanco: #ffffff;
+    --gris: #c5ced8;
+    --fondo: #081321;
+}
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(circle at top right, #173c60 0%, transparent 35%),
+        linear-gradient(135deg, #050d18, #10243b, #071321);
+    color: var(--blanco);
+    line-height: 1.8;
+    padding: 0 8%;
+    overflow-x: hidden;
+}
+
+/* CABECERA */
+header {
+    text-align: center;
+    padding: 65px 25px 40px;
+    margin-bottom: 45px;
+    border-bottom: 3px solid var(--rojo);
+    background: linear-gradient(135deg, #102d4d, #071321);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* TÍTULO PRINCIPAL */
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+    margin-bottom: 30px;
+    text-shadow: 0 5px 20px rgba(230, 57, 70, 0.4);
+}
+
+h1 em {
+    font-style: normal;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 12px 25px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.06);
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--rojo);
+    border-color: var(--rojo);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(230,57,70,0.35);
+}
+
+/* LÍNEA DIVISORIA */
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--rojo), #ffffff, var(--rojo), transparent);
+    margin: 45px 0;
+}
+
+/* TÍTULOS DE LOS APARTADOS */
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    margin-top: 65px;
+    margin-bottom: 20px;
+    padding: 15px 22px;
+    border-left: 6px solid var(--rojo);
+    background: linear-gradient(90deg, rgba(230,57,70,0.18), transparent);
+    border-radius: 0 12px 12px 0;
+}
+
+/* SUBTÍTULOS Y EXPLICACIONES */
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gris);
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+/* PÁRRAFOS */
+p {
+    margin-bottom: 20px;
+    color: var(--gris);
+}
+
+/* LISTAS */
+ul {
+    margin: 20px 0 30px 30px;
+    padding: 20px 35px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+li {
+    padding: 7px 0;
+    color: white;
+    transition: 0.3s;
+}
+
+li::marker {
+    color: var(--rojo);
+}
+
+li:hover {
+    color: #ff737d;
+    transform: translateX(8px);
+}
+
+/* IMÁGENES */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 35px auto;
+    border-radius: 18px;
+    border: 3px solid rgba(255,255,255,0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transition: all 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.025);
+    border-color: var(--rojo);
+    box-shadow: 0 15px 40px rgba(230,57,70,0.25);
+}
+
+/* ENLACES GENERALES */
+a {
+    color: #ff6873;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: white;
+}
+
+/* BOTONES */
+button {
+    display: inline-block;
+    background: linear-gradient(135deg, #e63946, #a91627);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    margin: 15px 0;
+    border-radius: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(230,57,70,0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.04);
+    background: linear-gradient(135deg, #ff5965, #d51f32);
+    box-shadow: 0 12px 30px rgba(230,57,70,0.5);
+}
+
+/* ENLACE AL VÍDEO */
+a[href*="youtu"] {
+    display: inline-block;
+    color: white;
+    background: #c51e2d;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 10px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+a[href*="youtu"]:hover {
+    background: #ff3548;
+    transform: translateY(-3px);
+}
+
+/* ENLACE DE INFORMACIÓN */
+a[href*="wikipedia"] {
+    text-decoration: none;
+}
+
+/* ANIMACIONES */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header,
+h2,
+img,
+ul {
+    animation: aparecer 0.8s ease both;
+}
+
+/* SELECCIÓN DE TEXTO */
+::selection {
+    background: var(--rojo);
+    color: white;
+}
+
+/* BARRA DE DESPLAZAMIENTO */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #071321;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--rojo);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6570;
+}
+
+/* DISEÑO PARA MÓVILES */
+@media (max-width: 768px) {
+
+    body {
+        padding: 0 5%;
+    }
+
+    header {
+        padding: 40px 15px 30px;
+    }
+
+    h1 {
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    h2 {
+        margin-top: 45px;
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* RESPETO A LA REDUCCIÓN DE MOVIMIENTO */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* =====================================
+   NUEVAS FUNCIONES DINÁMICAS
+   ===================================== */
+
+/* PANTALLA DE BIENVENIDA */
+
+#bienvenida {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: radial-gradient(circle, #173c60, #050d18 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1s, visibility 1s;
+}
+
+#bienvenida.oculta {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.bienvenida-contenido {
+    padding: 30px;
+    animation: entrada 1.2s ease;
+}
+
+.bienvenida-contenido h1 {
+    font-size: clamp(30px, 6vw, 65px);
+    color: white;
+}
+
+.bienvenida-contenido p {
+    color: #ddd;
+    font-size: 20px;
+}
+
+.balon-intro {
+    font-size: 90px;
+    animation: girar-balon 3s linear infinite;
+}
+
+#entrar-web {
+    margin-top: 25px;
+    background: #e63946;
+    color: white;
+    border: none;
+    padding: 17px 35px;
+    border-radius: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#entrar-web:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #e63946;
+}
+
+/* BALÓN GIRATORIO */
+
+@keyframes girar-balon {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BARRA DE PROGRESO */
+
+#barra-progreso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(90deg, #e63946, #ffb3b8);
+    z-index: 10000;
+    box-shadow: 0 0 12px #e63946;
+}
+
+/* RELOJ */
+
+#reloj-futbol {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: #102d4d;
+    color: white;
+    padding: 12px 18px;
+    border: 1px solid #e63946;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px #0008;
+}
+
+/* BALÓN FLOTANTE */
+
+#balon-flotante {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    font-size: 42px;
+    z-index: 100;
+    cursor: pointer;
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(0 5px 10px #0008);
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-18px) rotate(20deg); }
+}
+
+/* BOTÓN SUBIR */
+
+#volver-arriba {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #e63946;
+    color: white;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+    display: none;
+    transition: .3s;
+}
+
+#volver-arriba:hover {
+    transform: translateY(-6px);
+    background: #ff5965;
+}
+
+/* CONTADOR */
+
+#contador-futbol {
+    text-align: center;
+    margin: 45px auto;
+    padding: 30px;
+    max-width: 500px;
+    background: linear-gradient(135deg, #102d4d, #071321);
+    border: 1px solid #e63946;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #0005;
+}
+
+#contador-futbol span {
+    font-size: 35px;
+}
+
+#numero-contador {
+    display: block;
+    color: #ff5965;
+    font-size: 55px;
+    font-family: 'Oswald', sans-serif;
+}
+
+#contador-futbol p {
+    color: white;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* EFECTOS DE ENTRADA */
+
+.aparecer-scroll {
+    opacity: 0;
+    transform: translateY(45px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.aparecer-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* IMÁGENES INTERACTIVAS */
+
+img {
+    cursor: pointer;
+}
+
+img:hover {
+    filter: brightness(1.15) saturate(1.2);
+}
+
+/* MÓVILES */
+
+@media(max-width: 600px) {
+    #reloj-futbol {
+        top: 10px;
+        right: 10px;
+        font-size: 11px;
+        padding: 8px 12px;
+    }
+
+    #balon-flotante {
+        font-size: 32px;
+        right: 15px;
+        bottom: 85px;
+    }
+
+    #contador-futbol {
+        margin: 30px auto;
+    }
+}
+
+// PANTALLA DE BIENVENIDA CORREGIDA
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const botonEntrar = document.getElementById("entrar-web");
+    const bienvenida = document.getElementById("bienvenida");
+
+    if (botonEntrar && bienvenida) {
+
+        botonEntrar.addEventListener("click", function() {
+
+            bienvenida.classList.add("oculta");
+
+            setTimeout(function() {
+                bienvenida.style.display = "none";
+            }, 1000);
+
+        });
+
+    }
+
+});
+
+/* ======================================
+   PÁGINA DATOS EXTRA - DISEÑO PROFESIONAL
+   ====================================== */
+
+/* TÍTULO DE LA PÁGINA */
+
+body > h2 {
+    position: relative;
+}
+
+/* TABLA DE CLASIFICACIÓN */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #10243b;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+thead {
+    background: linear-gradient(135deg, #e63946, #991c2b);
+}
+
+th {
+    padding: 17px 12px;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 17px 10px;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    transition: .3s;
+}
+
+tbody tr {
+    background: rgba(255,255,255,0.035);
+    transition: .3s;
+}
+
+tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.08);
+}
+
+tbody tr:hover {
+    background: rgba(230,57,70,0.25);
+    transform: scale(1.01);
+}
+
+tbody tr:first-child td {
+    color: #ffd166;
+    font-weight: bold;
+}
+
+tbody tr td:last-child {
+    font-weight: 800;
+    color: #ff737d;
+}
+
+/* TABLA EN MÓVILES */
+
+@media(max-width: 850px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* FORMULARIO DE JUGADOR */
+
+section {
+    background: linear-gradient(145deg, #102d4d, #071321);
+    padding: 35px;
+    margin: 65px auto;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.4);
+    max-width: 850px;
+}
+
+section h2 {
+    margin-top: 0;
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid #e63946;
+    background: none;
+    padding-bottom: 20px;
+}
+
+section form p {
+    margin: 22px 0;
+}
+
+/* ETIQUETAS */
+
+section label {
+    display: inline-block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: 600;
+}
+
+/* CAMPOS */
+
+section input,
+section select,
+section textarea {
+    width: 100%;
+    padding: 14px 16px;
+    background: #071321;
+    color: white;
+    border: 1px solid #34516e;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: .3s;
+}
+
+section input:focus,
+section select:focus,
+section textarea:focus {
+    border-color: #e63946;
+    box-shadow: 0 0 15px rgba(230,57,70,0.25);
+    transform: translateY(-2px);
+}
+
+section input::placeholder,
+section textarea::placeholder {
+    color: #8192a5;
+}
+
+/* BOTONES DEL FORMULARIO */
+
+section button {
+    margin: 10px 8px 0 0;
+}
+
+section button[type="reset"] {
+    background: linear-gradient(135deg, #526477, #26384b);
+    box-shadow: none;
+}
+
+/* ESTADÍSTICAS */
+
+.estadistica-extra {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 850px;
+    margin: 50px auto;
+}
+
+.estadistica {
+    text-align: center;
+    padding: 25px 12px;
+    border-radius: 18px;
+    background: linear-gradient(145deg, #173c60, #0b192a);
+    border: 1px solid rgba(230,57,70,0.4);
+    transition: .3s;
+}
+
+.estadistica:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(230,57,70,0.2);
+}
+
+.estadistica span {
+    font-size: 35px;
+}
+
+.estadistica strong {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 38px;
+    color: #ff5965;
+}
+
+.estadistica p {
+    color: white;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* MENSAJE DE CONFIRMACIÓN */
+
+.mensaje-ficha {
+    position: fixed;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: #16834b;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    z-index: 9998;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+    text-align: center;
+    width: max-content;
+    max-width: 90%;
+    box-shadow: 0 8px 25px #0006;
+}
+
+.mensaje-ficha.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ADAPTACIÓN MÓVIL */
+
+@media(max-width: 600px) {
+    section {
+        padding: 20px;
+        margin: 40px auto;
+    }
+
+    .estadistica-extra {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    section button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
+
+/* ==========================================
+   PORTADA PRINCIPAL - HISTORIA DEL FÚTBOL
+   ========================================== */
+
+/* PORTADA */
+
+.portada-futbol {
+    position: relative;
+    min-height: 480px;
+    margin: 55px 0;
+    border-radius: 25px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3,12,25,0.96),
+            rgba(5,20,40,0.65),
+            rgba(5,20,40,0.25)
+        ),
+        url("https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1600&q=85");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.portada-contenido {
+    max-width: 700px;
+    padding: 55px;
+    animation: entrada 1s ease;
+}
+
+.etiqueta-portada {
+    display: inline-block;
+    color: #ff737d;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.portada-contenido h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(35px, 5vw, 65px);
+    line-height: 1.2;
+    color: white;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.portada-contenido p {
+    color: #d5dce5;
+    font-size: 17px;
+    max-width: 500px;
+}
+
+/* BOTÓN DE PORTADA */
+
+.boton-portada {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 30px;
+    border-radius: 35px;
+    background: linear-gradient(135deg, #e63946, #a91627);
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 25px #e6394644;
+    transition: .3s;
+}
+
+.boton-portada:hover {
+    transform: translateY(-6px);
+    background: #ff5965;
+    box-shadow: 0 12px 35px #e6394677;
+}
+
+/* TARJETAS */
+
+.tarjetas-indice {
+    margin: 80px 0;
+}
+
+.tarjetas-indice > h2 {
+    text-align: center;
+    border: none;
+    background: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-futbol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    min-height: 250px;
+
+    text-decoration: none;
+    color: white;
+
+    background: linear-gradient(145deg, #173c60, #091727);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px #0005;
+    transition: .4s;
+}
+
+.tarjeta-futbol:hover {
+    transform: translateY(-12px);
+    border-color: #e63946;
+    box-shadow: 0 15px 40px #e6394633;
+}
+
+.tarjeta-futbol span {
+    font-size: 45px;
+    margin-bottom: 15px;
+    transition: .4s;
+}
+
+.tarjeta-futbol:hover span {
+    transform: rotate(15deg) scale(1.2);
+}
+
+.tarjeta-futbol h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tarjeta-futbol p {
+    color: #b9c7d5;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.tarjeta-futbol strong {
+    color: #ff6570;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+/* PRESENTACIÓN PERSONAL */
+
+.presentacion-personal {
+    text-align: center;
+    max-width: 850px;
+    margin: 80px auto;
+    padding: 45px;
+    background: linear-gradient(145deg, #102d4d, #071321);
+    border-radius: 25px;
+    border: 1px solid rgba(230,57,70,0.4);
+    box-shadow: 0 15px 40px #0005;
+}
+
+.presentacion-icono {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e63946;
+    border-radius: 50%;
+    font-size: 40px;
+    box-shadow: 0 8px 25px #e6394655;
+}
+
+.presentacion-personal h2 {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 15px 0 25px;
+}
+
+.presentacion-personal p {
+    color: #c5ced8;
+    font-size: 16px;
+    line-height: 2;
+}
+
+/* FRASE FINAL */
+
+.frase-futbol {
+    text-align: center;
+    margin: 80px 0 50px;
+    padding: 55px 20px;
+    border-radius: 25px;
+
+    background:
+        linear-gradient(135deg, #e63946, #751322);
+    box-shadow: 0 15px 35px #0005;
+}
+
+.frase-futbol h2 {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(23px, 4vw, 38px);
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.frase-futbol p {
+    color: #ffe0e2;
+    font-size: 16px;
+}
+
+.frase-futbol span {
+    display: block;
+    font-size: 35px;
+    margin-top: 20px;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    .contenedor-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portada-contenido {
+        padding: 35px;
+    }
+}
+
+@media(max-width: 600px) {
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-futbol {
+        min-height: 400px;
+    }
+
+    .portada-contenido {
+        padding: 25px;
+    }
+
+    .presentacion-personal {
+        padding: 25px 18px;
+    }
+}
